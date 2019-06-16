@@ -20,7 +20,10 @@
     </head>
 
     <body>
-        <div><button class="btn_home"><a  class="link" href="index.php" >Back Home</a></button></div>
+        <div>
+          <button class="btn_home"><a  class="link" href="index.php" >
+          Back Home</a></button>
+        </div>
         
         <?php
             include('config/db_config.php');
@@ -36,7 +39,7 @@
                 while($member = mysqli_fetch_array($result)) {?>
                     <div>
                         <p class="com_title"><?= $member['title'] ?></p>
-                        <img src="<?= $member['picture'] ?>"/>
+                        <img src="images/<?= $member['picture'] ?>"/>
                         <p class=""><?= $member['description'] ?></p>
 
 
@@ -61,9 +64,6 @@
                     </div>
                 </form>
 
-      
-
-
                     </div>
                 <?php }
                 echo '</div>';
@@ -71,7 +71,9 @@
 
 
             <?php } else {?>
-                <h2>No Posts Available!</h2>
+              <div class="panel panel-warning">
+                 <h2 class="no_post">No Posts available!</h2>
+              </div>
             <?php }
         ?>
     </body>

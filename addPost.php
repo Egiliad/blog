@@ -28,6 +28,11 @@ if(isset($_POST['addPost'])){
    <link rel="stylesheet" type="text/css" href="css/style.css">
  </head>
  <body>
+
+   <div>
+    <button class="btn_back">
+      <a  class="link_back_home" href="index.php" >Back Home</a>
+    </button></div>
   <div class="blog-posts">
     <div class="header"><span>Add New Post</span></div>
     <form method="post" enctype="multipart/form-data" action="addPost.php">

@@ -30,7 +30,7 @@
                     while($member = mysqli_fetch_array($result)) {?>
                         <div class="wrapper">
                             <h2 class="header_home"><?= $member['title'] ?></h2>
-                            <img src="<?= $member['picture'] ?>"/>
+                            <img src="images/<?= $member['picture'] ?>"/>
                             <p> <?= $member['description'] ?></p>
                             <p><i>Posted on: <?= $member['created_date'] ?></i></p>
 
@@ -39,7 +39,9 @@
                     <?php }
                     echo '</div>';
                 } else {?>
-                    <h2>No Posts available!</h2>
+                    <div class="panel panel-warning">
+                        <h2 class="no_post">No Posts available!</h2>
+                    </div>
                 <?php }
             ?>
         </div>
